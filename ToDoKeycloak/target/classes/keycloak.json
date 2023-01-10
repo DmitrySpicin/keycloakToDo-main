@@ -1,8 +1,8 @@
 {
   "realm": "master",
   "auth-server-url" : "http://localhost:8080",
-  "resource" : "login-app",
+  "resource" : "my-client",
   "credentials": {
-    "secret": "WZ9AiOgQXOyUTXF6WGKrsF5ZAekxjrGm"
+    "secret": "Gw7ncCch8HUpWbFtZeR0v3ZsmGD4zQ8k"
   }
 }

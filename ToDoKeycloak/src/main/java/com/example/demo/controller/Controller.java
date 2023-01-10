@@ -27,9 +27,11 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class Controller {
-
     @Autowired
     private Service service;
+
+    @Autowired
+    private KeycloakAdminClientExample serviceKey;
 
     @GetMapping("/login")
     public UserLoginDto login(@RequestBody User user) {
@@ -69,7 +71,12 @@ public class Controller {
         } else {
             return new ResponseEntity(new CustomSuccessResponse(service.getPaginated(page, perPage)), HttpStatus.OK);
         }
+    }
 
+    @PutMapping("/v1/email")
+    public ResponseEntity sendMessageEmailPassword() {
+        serviceKey.sendEmailResetPassword();
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @PostMapping

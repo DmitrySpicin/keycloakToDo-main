@@ -25,6 +25,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                         authorizeRequests
                                 .antMatchers("/v1/todo/login/**").permitAll()
                                 .antMatchers("/v1/todo/create/**").permitAll()
+                                .antMatchers("/v1/todo/v1/**").permitAll()
                                 .anyRequest().authenticated().and().csrf().disable();
                     } catch (Exception e) {
                         e.printStackTrace();

@@ -59,6 +59,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.keycloak/keycloak-email-freemarker -->
+		<dependency>
+			<groupId>org.keycloak</groupId>
+			<artifactId>keycloak-email-freemarker</artifactId>
+			<version>1.8.1.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+
+
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>

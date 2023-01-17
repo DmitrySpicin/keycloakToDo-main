@@ -23,7 +23,7 @@ import java.util.UUID;
 
 
 @CrossOrigin
-@RequestMapping("/v1/todo")
+@RequestMapping("/api")
 @RestController
 @RequiredArgsConstructor
 public class Controller {

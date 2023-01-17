@@ -30,8 +30,8 @@ public class KeycloakAdminClientExample {
         String serverUrl = "http://localhost:8080/";
         String realm = "master";
         // idm-client needs to allow "Direct Access Grants: Resource Owner Password Credentials Grant"
-        String clientId = "my-client";
-        String clientSecret = "Gw7ncCch8HUpWbFtZeR0v3ZsmGD4zQ8k";
+        String clientId = "login-app";
+        String clientSecret = "WZ9AiOgQXOyUTXF6WGKrsF5ZAekxjrGm";
 
         ClientRepresentation client = new ClientRepresentation();
         client.setId(clientId);
@@ -49,8 +49,8 @@ public class KeycloakAdminClientExample {
                 .grantType(OAuth2Constants.PASSWORD) //
                 .clientId("admin-cli") //
                 .clientSecret(clientSecret) //
-                .username("root") //
-                .password("root") //
+                .username("admin") //
+                .password("admin") //
                 .build();
 
 
@@ -119,7 +119,7 @@ public class KeycloakAdminClientExample {
 //        userResource.remove();
     }
     public void sendEmailResetPassword() {
-        String clientSecret = "Gw7ncCch8HUpWbFtZeR0v3ZsmGD4zQ8k";
+        String clientSecret = "WZ9AiOgQXOyUTXF6WGKrsF5ZAekxjrGm";
         String serverUrl = "http://localhost:8080/";
         String realm = "master";
         Keycloak keycloak = KeycloakBuilder.builder() //
@@ -128,8 +128,8 @@ public class KeycloakAdminClientExample {
                 .grantType(OAuth2Constants.PASSWORD) //
                 .clientId("admin-cli") //
                 .clientSecret(clientSecret) //
-                .username("root") //
-                .password("root") //
+                .username("admin") //
+                .password("admin") //
                 .build();
         RealmResource realmResource = keycloak.realm(realm);
         String userId = "1839a597-1cef-49d7-b682-37195d1d88b1";
